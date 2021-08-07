@@ -1,0 +1,144 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{洪晓恒}
+
+% {E-mail}{mobilephone}{homepage}
+% be careful of _ in emaill address
+\contactInfo{电话: 15800645270(同微信) / +61 426857350}{邮箱: shawn.hong@outlook.com}{}{} 
+% {E-mail}{mobilephone}
+% keep the last empty braces!
+%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
+ 
+\section{专业技能}
+\begin{itemize}
+  \item Coding: C++ / C / Python / JS / React / Flask / Shell / MongoDB / MySQL
+\end{itemize}
+
+% \section{\faGraduationCap\ 教育背景}
+\section{教育背景}
+\datedsubsection{\textbf{新南威尔士大学},计算机,\textit{硕士在读}}{2019.07 - 2021.09}
+\begin{itemize}
+\item 全额奖学金 | GPA 6/7 | 获美国杜克大学计算机硕士录取后放弃赴美 | 澳洲永久居民
+\end{itemize}
+
+\datedsubsection{\textbf{中国科学院大学},物理化学,\textit{理学硕士}}{2014.09 - 2017.06}
+\begin{itemize}
+\item 保送研究生 | 累计影响因子40 | 特等奖学金2次 |上海市普通高等学校优秀毕业生
+\end{itemize}
+
+\datedsubsection{\textbf{华东师范大学},化学,\textit{理学学士}}{2010.09 - 2014.06}
+\begin{itemize}
+\item 特等奖学金2次 | 期间获国家留学基金委公派出国访学 | 上海市普通高等学校优秀毕业生
+\end{itemize}
+
+% \end{itemize}
+
+\section{工作经历}
+\datedsubsection{\textbf{泽源资本}, 量化交易实习}{2020.06 - 2020.12}
+\begin{itemize}
+%   \item 飞猪北京前端团队全面负责各交通线的票务(机票/火车票/汽车票) web 应用与事业群基础架构研发
+  \item 参与期货交易工程，参与交易策略筛选及算法实现，独立负责马科维茨投资组合模块的实现。
+\end{itemize}
+
+\datedsubsection{\textbf{上汽集团前瞻研究部},固态电池工程师}{2017.07 - 2018.10}
+\begin{itemize}
+  \item 全固态电池项目技术负责人，负责全固态电解质、锂离子正极及软包电池研发及项目管理。
+\end{itemize}
+
+
+\section{项目作品}
+
+\datedsubsection{\textbf{菜谱分享网站 - 后端}}{Flask, MongoDB, Redis}
+\begin{itemize}
+  \item 基于Flask搭建的菜谱分享社区网站，本人独立负责后端部分，另四人前端部分。
+  \item 遵循RESTful风格搭建了后端API，以Swagger生成API文档。以JWT鉴权用户访问权限。
+  \item 以Redis缓存热点数据,提升响应速度。更新策略采取Cache Aside方式，先更新DB数据，再删除缓存，保证最终一致性。相比无缓存的设计，API响应速度从100-200ms大幅提高至20-50ms，同时在内容社区类网站对一致性要求不苛刻的场景下保证了数据的最终一致性。
+  \item 主DB采用MongoDB，基于MongoDB Atlas索引及search pipeline实现站内全文搜索。
+  \item 已作为毕业设计以满分通过答辩，正在逐步重构部分代码，部署上云，开发站内聊天消息推送等。
+\end{itemize}
+
+\datedsubsection{\textbf{马科维茨均值-方差模型的投资组合优化程序}}{Python(numpy, pandas)}
+\begin{itemize}
+  \item 基于200多个交易策略，针对各交易标过去一段时间内的实盘收益，滚动计算出最优化的投资组合方
+  案(最低风险方案，最高收益方案，最高夏普比率方案等)。实盘交易采用计算所得的优化方案后，收益回撤比从 2 至 3 
+  大幅提高至 4 至 5，投资组合抗风险能力显著提高。
+\end{itemize}
+
+
+\datedsubsection{\textbf{课堂互动答题网站 - 前端}}{React}
+\begin{itemize}
+  \item 基于React框架搭建的课堂互动答题网站 (独立负责前端部分，另二人负责后端部分)。主要功能参考了Kahoot，包括：题目编辑或
+  JSON上传，课堂进度控制，答题情况统计，历史答题查看，参与课程测试，测试结果统计与查看。UI 部分使用Material UI 搭建。基于AJAX更新页面内容。
+\end{itemize}
+
+\datedsubsection{\textbf{可穿戴社交距离报警器}}{C, Contiki}
+\begin{itemize}
+  \item 基于TI CC2650单片机运行的社交距离报警程序，基于Contiki IOT系统。任意终端
+  间以802.15.4协议通信，通过信号强度指示测得终端间距离，当终端间距离小于2米时触发报警，终端通过TCP连接
+  将密切接触信息发送给后台。网络拓扑结构为星型网络；报警精度达到±0.2 m.
+\end{itemize}
+
+% \datedsubsection{\textbf{Mini -Git}}{Shell}
+% \begin{itemize}
+%   \item 以Shell编写的小型版本控制系统，支持初始化，提交，状态检查，分支，合并，日志记录等操作。
+% \end{itemize}
+
+\section{论文发表}
+%\begin{itemize}
+ 总被引 343 次：J. Power Sources 324 (2016): 455-461; J. Mater. Chem. A 5 (2017): 14775-14782; J. Mater. Chem. A 4.43
+  (2016): 16968-16974; J. Power Sources 342 (2017): 521-528; J. Mater. Chem. A 5 (2017): 13430-13438; ACS
+  Appl. Mater. Inter. 9.34 (2017): 28549-28557; Energy Storage Mater. 11 (2018): 16-23
+%\end{itemize}
+
+\section{英语}
+\begin{itemize}
+  \item 托福 106/120, 雅思 8.0/9.0, PTE 90/90, GRE 323, 四级 637, 六级 625, 英语高级口译, 澳洲 NATII 口译
+\end{itemize}
+
+
+% % increase linespacing [parsep=0.5ex]
+% \begin{itemize}[parsep=0.2ex]
+% %   \item LeetCodeOJ Solutions, \textit{https://github.com/hijiangtao/LeetCodeOJ}
+%   \item 第三届中国软件杯大学生软件设计大赛\textbf{全国一等奖}( \textit{http://www.cnsoftbei.com/} ),2014 年8月
+%   \item 中国机器人大赛创意设计大赛\textbf{全国特等奖}( \textit{http://www.rcccaa.org/} ),2013年8月
+% %   \item 中国机器人大赛暨Robocup公开赛(武术擂台赛)全国一等奖,2013年10月
+%   \item 第11届北京理工大学“世纪杯”竞赛学生课外科技作品竞赛\textbf{特等奖},2013年8月
+%   \item VIS Components for security system, \textit{https://hijiangtao.github.io/ss-vis-component/}
+%   \item 个人博客：\textit{https://hijiangtao.github.io/}，更多作品见 \textit{https://github.com/hijiangtao}
+% %   \item 电视节目"爸爸去哪儿"可视化分析展示, \textit{https://hijiangtao.github.io/variety-show-hot-spot-vis/}
+% \end{itemize}
+
+% \begin{onehalfspacing}
+% \end{onehalfspacing}
+
+% \datedsubsection{\textbf{DID-ACTE} 荷兰莱顿}{2015年3月 - 2015年6月}
+% \role{本科毕业设计}{LIACS 交换生}
+% 利用结巴分词对中国古文进行分词与词性标注，用已有领域知识训练形成 classifier 并对结果进行调优
+% \begin{onehalfspacing}
+% \begin{itemize}
+%   \item 利用结巴分词对中国古文进行分词与词性标注
+%   \item 利用已有领域知识训练形成 classifier, 并用分词结果进行测试反馈
+%   \item 尝试不同规则，对 classifier 进行调优
+% \end{itemize}
+% \end{onehalfspacing}
+
+
+
+
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
