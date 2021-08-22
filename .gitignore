@@ -39,3 +39,5 @@ jspm_packages
 *.pdf
 *.aux
 *.gz
+
+pdf/*
