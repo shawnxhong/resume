@@ -112,14 +112,33 @@
 %     \item Perception in end-user experience with knowledge on both frontend \& backend developments. 
 % \end{itemize}
 
-% thales
+
+% % % 字节 国际化
+% \section{Basic Info}
+% \begin{itemize}
+%     \item Permanent Resident of Australia with a vision of international internet business. Experience in finance Industry.
+%     \item Solid programming experience in C++, Python, Bash and Perl. Understanding of algorithms \& data structures.
+%     \item Knowledge on both frontend \& backend developments. Experience with SQL/NoSQL storages. 
+% \end{itemize}
+
+
+% % thales
+% \section{Basic Info}
+% \begin{itemize}
+%     \item Solid programming experience in C++, Python, JS, HTML/CSS and Bash. 
+%     Hands-on experince of frontend developments \& RESTful backend developments using
+%     Flask, Redis, MongoDB and Postgres. 
+%     \item Permanent Resident of NSW with full working rights in Australia (190 visa).
+% \end{itemize}
+
+% TP link
 \section{Basic Info}
 \begin{itemize}
-    \item Solid programming experience in C++, Python, JS, HTML/CSS and Bash. 
-    Hands-on experince of frontend developments \& RESTful backend developments using
-    Flask, Redis, MongoDB and Postgres. 
-    \item Permanent Resident of NSW with full working rights in Australia (190 visa).
+    \item Solid programming experience in C++, Python, JS and Bash. Understanding of algorithms and data structures.
+    \item Perception on both frontend \& backend developments. Knowledge in SQL/NoSQL databases, network and os. 
 \end{itemize}
+
+
 
 % \section{Coding Skills}
 % \begin{itemize}
@@ -161,11 +180,12 @@
 
 \datedsubsection{\textbf{Recipes sharing website - Backend}}{Flask, MongoDB, Redis}
 \begin{itemize}
-  \item A recipes sharing website built by a group of 5 people. I am in charge of the backend whilst the other 4 frontend.
-  \item RESTful API based backend services built on top of Flask. Swagger UI is used for documentation and API testing. JSON Web Token is applied for authentication.
+  \item A recipes sharing website built by a group of 5, in which I work on the backend whilst the other 4 frontend.
+  \item RESTful API based backend services built on top of Flask. Swagger UI is used for documentation and API testing. JSON Web Token is applied for authentication. SnowFlake algorithm is used for generating distributed unique self-increased ID for users and blogs.
   \item Built a Redis caching layer to cache hot data. Adopted cache aside structure to ensure the eventual consistency where data is deleted from the cache after updated in the main DB. Improved API responsing time from 100-200ms to 20-50ms with the caching layer applied.
   \item MongoDB is used as the main DB. The full text search function is built based on the index and search pipeline.
-  \item Obtained full mark as the final project of the degree. Future plan is to deploy the application to cloud service, develop online chat function and message queue service.
+  \item Image sources are stored at a image hosting service to enable image transmission via JSON using url as a pointer. The rendering time of large blogs (>50MB) is reduced from >8 sec to <1 sec after this improvement.  
+  %   \item Obtained full mark as the final project of the degree. Future plan is to deploy the application to cloud service, develop online chat function and message queue service.
 \end{itemize}
 
 \datedsubsection{\textbf{Markowitz portfolio optimization program}}{Numpy, Pandas}
@@ -174,17 +194,21 @@
   \item For multiple future commodities, the return/retracement ratio are largely improved from 2 - 3 to 4 -5 after applied with the computed optimized portfolio.
 \end{itemize}
 
+\datedsubsection{\textbf{Coppersmith-Winograd Matrix Multiplication Module}}{C++}
+\begin{itemize}
+  \item A matrix multiplication module using Coppersmith-Winograd algorithm written in C++11. Implemented using generic programming to enchance usability. The time complexity is reduced to O($n^{2.38}$) compared to O($n^3$) using the algorithm by definition.
+\end{itemize}
 
 \datedsubsection{\textbf{Online Quiz website - Frontend}}{React}
 \begin{itemize}
-  \item An online quiz website. Functionalities for teachers' side include quiz creation \& edition, quiz progress control and history statistics summary. Students' side features include quiz participation and result summary.
+  \item An online quiz website. Functionalities for teachers' side include quiz creation \& edition, quiz progress control and history statistics summary. Students' side features include quiz participation and result summary. 
   \item The single page application interact with backend APIs using AJAX request. 
 \end{itemize}
 
-\datedsubsection{\textbf{Wearable social distancing alerting program}}{C, Contiki}
-\begin{itemize}
-  \item Based on Contiki-OS, end device e.g. TI cc2650 communicate with each other via 802.15.4 in star topology local area network. Distances between two device are measured using received signal strength indicator. Close contact less than 2 meters is sent back to end server via TCP to record potential close contact.
-\end{itemize}
+% \datedsubsection{\textbf{Wearable social distancing alerting program}}{C, Contiki}
+% \begin{itemize}
+%   \item Based on Contiki-OS, end device e.g. TI cc2650 communicate with each other via 802.15.4 in star topology local area network. Distances between two device are measured using received signal strength indicator. Close contact less than 2 meters is sent back to end server via TCP to record potential close contact.
+% \end{itemize}
 
 \section{Publications, total citation 343}
 %\begin{itemize}
